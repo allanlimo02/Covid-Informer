@@ -47,6 +47,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             finish();
         }
         if(view==mCreateUserButton){
+
             createUser();
 //            Toast.makeText(SignUp.this, "Log in button clicked", Toast.LENGTH_SHORT).show();
 
@@ -60,11 +61,12 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
         firebaseAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, task -> {
-                   if(password==confirmPassword){
+
+                    if(password.equals(confirmPassword)){
                         if(task.isSuccessful()){
                             Intent intent= new Intent(SignUp.this, Informer.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            Toast.makeText(SignUp.this, name+"Registration Successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUp.this, "Welcome "+name, Toast.LENGTH_SHORT).show();
                             startActivity(intent);
                         }else {
                             Toast.makeText(SignUp.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
