@@ -44,9 +44,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
             }
         };
-
     }
-
     @Override
     public void onClick(View view) {
         if(view==mSignup){
