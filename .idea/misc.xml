@@ -5,8 +5,9 @@
       <map>
         <entry key="app/src/main/res/drawable/white_with_border_radius.xml" value="0.30364583333333334" />
         <entry key="app/src/main/res/layout/activity_informer.xml" value="0.2833333333333333" />
-        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.3146067415730337" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2833333333333333" />
       </map>
     </option>
   </component>
