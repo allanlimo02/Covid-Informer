@@ -13,4 +13,6 @@
     <string name="email">Input your Email</string>
     <string name="name">Name</string>
     <string name="create_account">Create Account</string>
+    <string name="search_cases">Search Cases</string>
+    <string name="input_country_to_view_cases">Input country to view cases</string>
 </resources>

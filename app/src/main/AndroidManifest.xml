@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CovidInformer">
         <activity
-            android:name=".UI.Informer"
+            android:name=".UI.CovidSearch"
             android:exported="true" />
         <activity
             android:name=".UI.SignUp"
