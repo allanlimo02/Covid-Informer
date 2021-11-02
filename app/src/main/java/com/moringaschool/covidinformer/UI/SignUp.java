@@ -73,7 +73,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                         }
                    }
                    else{
-                       mPasswordError.setText("Password don't match");
+                        mConfirmPasswordEditText.setError("Password don't match");
                    }
                 });
 
