@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CovidInformer">
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.Informer"
+            android:exported="true" />
+        <activity
+            android:name=".UI.SignIn"
+            android:exported="true" />
+        <activity
+            android:name=".UI.LogIn"
+            android:exported="true" />
+        <activity
+            android:name=".UI.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
