@@ -27,6 +27,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.signup) TextView mSignup;
 
     private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,12 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         mSignup.setOnClickListener(this);
 
         firebaseAuth=FirebaseAuth.getInstance();
+        mAuthListener= new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
+            }
+        };
 
     }
 
@@ -67,6 +74,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                         if(task.isSuccessful()){
                             Toast.makeText(LogIn.this,"Welcome back ",Toast.LENGTH_LONG).show();
                             Intent intent= new Intent(LogIn.this,Informer.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                         }else {
                             Toast.makeText(LogIn.this,"Wrong credentials",Toast.LENGTH_LONG).show();
@@ -75,5 +83,18 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                     }
                 });
 
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        firebaseAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            firebaseAuth.removeAuthStateListener(mAuthListener);
+        }
     }
 }
