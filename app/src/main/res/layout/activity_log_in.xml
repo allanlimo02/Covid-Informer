@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UI.LogIn">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/blank_space"
+        android:scaleType="centerCrop"
+        android:src="@drawable/landing" />
+
+    <EditText
+        android:layout_width="280sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/username"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="420dp"
+        android:background="@drawable/white_with_border_radius"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:hint="@string/input_your_email"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:inputType="text"
+        android:autofillHints="@gmail.com" />
+
+    <EditText
+        android:layout_width="280sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="337dp"
+        android:background="@drawable/white_with_border_radius"
+        android:hint="@string/nput_your_password"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:autofillHints=" "
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="252dp"
+        android:text="@string/log_in" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="177dp"
+        android:text="@string/create_an_account_here"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
