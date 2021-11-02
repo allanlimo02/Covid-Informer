@@ -73,7 +73,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(LogIn.this,"Welcome back ",Toast.LENGTH_LONG).show();
-                            Intent intent= new Intent(LogIn.this,Informer.class);
+                            Intent intent= new Intent(LogIn.this, CovidSearch.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                         }else {

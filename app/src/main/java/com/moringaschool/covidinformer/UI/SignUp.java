@@ -64,7 +64,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
                     if(password.equals(confirmPassword)){
                         if(task.isSuccessful()){
-                            Intent intent= new Intent(SignUp.this, Informer.class);
+                            Intent intent= new Intent(SignUp.this, CovidSearch.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             Toast.makeText(SignUp.this, "Welcome "+name, Toast.LENGTH_SHORT).show();
                             startActivity(intent);
