@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "276898923830",
+    "project_id": "covid-informer-b18ba",
+    "storage_bucket": "covid-informer-b18ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276898923830:android:b82d04d524c1b026aadf97",
+        "android_client_info": {
+          "package_name": "com.moringaschool.covidinformer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276898923830-aq1pnh0he43iob8tqfjd78do2elbf4j7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD8NH2UbTKoeUmqWiYqyWSO8f9ThQ7ulA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276898923830-aq1pnh0he43iob8tqfjd78do2elbf4j7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
