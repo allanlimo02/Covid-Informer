@@ -1,8 +1,10 @@
-package com.moringaschool.covidinformer;
+package com.moringaschool.covidinformer.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.moringaschool.covidinformer.R;
 
 public class MainActivity extends AppCompatActivity {
 
