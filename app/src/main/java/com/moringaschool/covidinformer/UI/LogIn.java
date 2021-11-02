@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.moringaschool.covidinformer.R;
 
 import butterknife.BindView;
@@ -19,6 +20,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.password) EditText mPassword;
     @BindView(R.id.login) Button mLoginButton;
     @BindView(R.id.signup) TextView mSignup;
+
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
