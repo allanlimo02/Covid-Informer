@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
 public class LogIn extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.username) EditText mUsername;
     @BindView(R.id.password) EditText mPassword;
-    @BindView(R.id.login) Button mLoginButton;
+    @BindView(R.id.loginButton) Button mLoginButton;
     @BindView(R.id.signup) TextView mSignup;
 
     private FirebaseAuth firebaseAuth;
