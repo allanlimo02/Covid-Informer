@@ -28,6 +28,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'x_rapidapi_key', x_rapidapi_key
+    }
 }
 
 dependencies {
