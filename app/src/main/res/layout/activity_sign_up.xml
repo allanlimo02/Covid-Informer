@@ -113,7 +113,7 @@
             android:textColor="@color/colorTextIcons"
             android:textStyle="bold"
             android:fontFamily="@font/poppins"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:text="@string/already_have_an_account_log_in_here"
             android:id="@+id/loginTextView"/>
 

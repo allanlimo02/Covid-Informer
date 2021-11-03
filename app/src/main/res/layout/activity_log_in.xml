@@ -24,13 +24,17 @@
         android:textColor="@color/white"
         android:textSize="40sp" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
     <EditText
         android:id="@+id/username"
         android:layout_width="280sp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/loginPageTextView"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:autofillHints="@gmail.com"
         android:background="@drawable/white_with_border_radius"
         android:fontFamily="@font/poppins"
@@ -49,7 +53,7 @@
         android:layout_below="@+id/username"
         android:layout_marginTop="30dp"
         android:background="@drawable/white_with_border_radius"
-        android:hint="@string/nput_your_password"
+        android:hint="@string/Input_your_password"
         android:minHeight="48dp"
         android:padding="10dp"
         tools:ignore="SpeakableTextPresentCheck"
@@ -75,7 +79,8 @@
         android:text="@string/create_an_account_here"
         android:fontFamily="@font/poppins"
         android:textColor="@color/white"
-        android:textSize="15sp" />
-
+        android:paddingTop="10dp"
+        android:textSize="13sp" />
+    </RelativeLayout>
 
 </RelativeLayout>

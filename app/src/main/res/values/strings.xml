@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Covid Informer</string>
     <string name="log_in">Log In</string>
-    <string name="nput_your_password">nput your Password</string>
-    <string name="nput_your_email">nput your email</string>
+    <string name="Input_your_password">Input your Password</string>
+    <string name="Input_your_email">Input your email</string>
     <string name="blank_space" />
-    <string name="input_your_email">input_your_email</string>
+    <string name="input_your_email">Input_your_email</string>
     <string name="create_an_account_here">Create an account here.</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up">Sign up</string>
