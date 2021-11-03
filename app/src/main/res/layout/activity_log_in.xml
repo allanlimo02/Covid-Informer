@@ -14,6 +14,7 @@
         android:src="@drawable/landing" />
 
     <TextView
+        android:id="@+id/loginPageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -21,16 +22,15 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/covid_informer"
         android:textColor="@color/white"
-        android:textSize="42sp" />
+        android:textSize="40sp" />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="280sp"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="420dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/loginPageTextView"
+        android:layout_marginTop="150dp"
         android:autofillHints="@gmail.com"
         android:background="@drawable/white_with_border_radius"
         android:fontFamily="@font/poppins"
@@ -41,14 +41,13 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:layout_width="280sp"
-        android:layout_height="wrap_content"
         android:id="@+id/password"
+        android:layout_width="270sp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:fontFamily="@font/poppins"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="337dp"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="30dp"
         android:background="@drawable/white_with_border_radius"
         android:hint="@string/nput_your_password"
         android:minHeight="48dp"
@@ -58,28 +57,25 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="174dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/password"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/poppins"
-        android:layout_marginBottom="252dp"
         android:text="@string/log_in" />
 
     <TextView
         android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="113dp"
-        android:layout_marginBottom="177dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/loginButton"
         android:text="@string/create_an_account_here"
         android:fontFamily="@font/poppins"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="15sp" />
 
 
 </RelativeLayout>
