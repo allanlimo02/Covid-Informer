@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CovidInformer">
         <activity
+            android:name=".UI.CovidStats"
+            android:exported="true" />
+        <activity
             android:name=".UI.CovidSearch"
             android:exported="true" />
         <activity
@@ -17,7 +20,7 @@
             android:exported="true" />
         <activity
             android:name=".UI.LogIn"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,9 +29,7 @@
         </activity>
         <activity
             android:name=".UI.MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
