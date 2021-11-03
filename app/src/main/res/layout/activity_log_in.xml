@@ -49,7 +49,7 @@
         android:layout_below="@+id/username"
         android:layout_marginTop="30dp"
         android:background="@drawable/white_with_border_radius"
-        android:hint="@string/nput_your_password"
+        android:hint="@string/Input_your_password"
         android:minHeight="48dp"
         android:padding="10dp"
         tools:ignore="SpeakableTextPresentCheck"
