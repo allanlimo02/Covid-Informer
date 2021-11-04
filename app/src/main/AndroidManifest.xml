@@ -15,7 +15,8 @@
         <activity android:name=".UI.CovidStats">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UI.MainActivity" />
+                android:value=".UI.MainActivity"
+                />
         </activity>
         <activity
             android:name=".UI.SignUp"
@@ -29,7 +30,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.MainActivity"></activity>
+        <activity android:name=".UI.MainActivity"
+            android:theme="@style/Theme.CovidInformer">
+
+        </activity>
     </application>
 
 </manifest>

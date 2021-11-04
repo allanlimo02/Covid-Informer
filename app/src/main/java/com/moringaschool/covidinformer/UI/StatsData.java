@@ -44,7 +44,6 @@ public class StatsData extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_stats_data);
 
         back = findViewById(R.id.backImageView);
@@ -75,8 +74,6 @@ public class StatsData extends AppCompatActivity{
     }
 
     private void LoadCountryData() {
-        //Show dialog
-        //activity.ShowDialog(this);
 
         Handler postDelayToshowProgress = new Handler();
         postDelayToshowProgress.postDelayed(new Runnable() {
