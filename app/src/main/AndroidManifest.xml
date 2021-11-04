@@ -9,16 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoTheme">
-        <activity
-            android:name=".UI.CovidStats"
-            android:exported="true" />
+
+        <activity android:name=".UI.CovidStats">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".UI.MainActivity" />
+        </activity>
+
         <activity
             android:name=".UI.CovidSearch"
-            android:exported="true"
-            android:theme="@style/Theme.CovidInformer"/>
+            android:theme="@style/Theme.CovidInformer">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UI.MainActivity" />
+        </activity>
+
         <activity
             android:name=".UI.SignUp"
             android:exported="true" />
+
         <activity
             android:name=".UI.LogIn"
             android:exported="true">
@@ -28,9 +37,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".UI.MainActivity"
-            android:exported="true"></activity>
+
+        <activity android:name=".UI.MainActivity">
+        </activity>
     </application>
 
 </manifest>
