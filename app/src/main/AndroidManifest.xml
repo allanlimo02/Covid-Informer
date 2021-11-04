@@ -8,13 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CovidInformer">
+        android:theme="@style/Theme.NoTheme">
         <activity
             android:name=".UI.CovidStats"
             android:exported="true" />
         <activity
             android:name=".UI.CovidSearch"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.CovidInformer"/>
         <activity
             android:name=".UI.SignUp"
             android:exported="true" />
