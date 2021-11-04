@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -14,11 +13,12 @@ import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.widget.EditText;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.androidgamesdk.gametextinput.Listener;
 import com.moringaschool.covidinformer.Adapter.StatsAdapter;
 import com.moringaschool.covidinformer.R;
 import com.moringaschool.covidinformer.model.Stats;
@@ -31,14 +31,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import okhttp3.Request;
-import retrofit2.Response;
-
 public class CovidStats extends AppCompatActivity {
 
     private RecyclerView rv_country_wise;
-    private StatsAdapter countryWiseAdapter;
-    private ArrayList<Stats> StatsArrayList;
+    private StatsAdapter statsAdapter;
+    private ArrayList<Stats> statsArrayList;
     private SwipeRefreshLayout swipeRefreshLayout;
     private EditText et_search;
 
@@ -56,7 +53,6 @@ public class CovidStats extends AppCompatActivity {
 
         FetchStatsData();
 
-        //Setting swipe refresh layout
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -65,6 +61,7 @@ public class CovidStats extends AppCompatActivity {
             }
         });
 
+        //Search listener
         et_search.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -85,12 +82,12 @@ public class CovidStats extends AppCompatActivity {
 
     private void Filter(String text) {
         ArrayList<Stats> filteredList = new ArrayList<>();
-        for (Stats item : StatsArrayList) {
+        for (Stats item : statsArrayList) {
             if (item.getCountry().toLowerCase().contains(text.toLowerCase())) {
                 filteredList.add(item);
             }
         }
-        countryWiseAdapter.filterList(filteredList, text);
+        statsAdapter.filterList(filteredList, text);
     }
 
 
@@ -99,14 +96,14 @@ public class CovidStats extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         String apiURL = "https://corona.lmao.ninja/v2/countries";
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
-                com.android.volley.Request.Method.GET,
+                Request.Method.GET,
                 apiURL,
                 null,
                 new com.android.volley.Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
                         try {
-                            StatsArrayList.clear();
+                            statsArrayList.clear();
                             for (int i=0;i<response.length(); i++){
                                 JSONObject countryJSONObject = response.getJSONObject(i);
 
@@ -125,9 +122,9 @@ public class CovidStats extends AppCompatActivity {
                                 Stats stats  = new Stats(str_country, str_confirmed, str_confirmed_new, str_active,
                                         str_death, str_death_new, str_recovered, str_tests, flagUrl);
                                 //adding data to our arraylist
-                                StatsArrayList.add(stats);
+                                statsArrayList.add(stats);
                             }
-                            Collections.sort(StatsArrayList, new Comparator<Stats>() {
+                            Collections.sort(statsArrayList, new Comparator<Stats>() {
                                 @Override
                                 public int compare(Stats o1, Stats o2) {
                                     if (Integer.parseInt(o1.getConfirmed())>Integer.parseInt(o2.getConfirmed())){
@@ -141,8 +138,7 @@ public class CovidStats extends AppCompatActivity {
                             makeDelay.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    countryWiseAdapter.notifyDataSetChanged();
-                                    //activity.DismissDialog();
+                                    statsAdapter.notifyDataSetChanged();
                                 }
                             }, 1000);
                         } catch (JSONException e) {
@@ -150,7 +146,7 @@ public class CovidStats extends AppCompatActivity {
                         }
                     }
                 },
-                new com.android.volley.Response.ErrorListener() {
+                new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
@@ -167,9 +163,9 @@ public class CovidStats extends AppCompatActivity {
         rv_country_wise.setHasFixedSize(true);
         rv_country_wise.setLayoutManager(new LinearLayoutManager(this));
 
-        StatsArrayList = new ArrayList<>();
-        countryWiseAdapter = new StatsAdapter(CovidStats.this, StatsArrayList);
-        rv_country_wise.setAdapter(countryWiseAdapter);
+        statsArrayList = new ArrayList<>();
+        statsAdapter = new StatsAdapter(CovidStats.this, statsArrayList);
+        rv_country_wise.setAdapter(statsAdapter);
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

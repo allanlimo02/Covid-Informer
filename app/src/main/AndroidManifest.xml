@@ -18,13 +18,6 @@
                 android:value=".UI.MainActivity" />
         </activity>
         <activity
-            android:name=".UI.CovidSearch"
-            android:theme="@style/Theme.CovidInformer">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UI.MainActivity" />
-        </activity>
-        <activity
             android:name=".UI.SignUp"
             android:exported="true" />
         <activity

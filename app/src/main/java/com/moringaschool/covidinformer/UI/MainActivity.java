@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (view == mButtonStats) {
-            Intent intent = new Intent(MainActivity.this, CovidSearch.class);
+            Intent intent = new Intent(MainActivity.this, CovidStats.class);
             startActivity(intent);
         }
 
