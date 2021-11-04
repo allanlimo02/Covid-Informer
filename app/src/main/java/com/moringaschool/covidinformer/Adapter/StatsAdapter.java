@@ -27,7 +27,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.moringaschool.covidinformer.R;
+import com.moringaschool.covidinformer.UI.StatsData;
 import com.moringaschool.covidinformer.model.Stats;
 
 import java.text.NumberFormat;
@@ -98,7 +101,7 @@ public class StatsAdapter extends RecyclerView.Adapter<StatsAdapter.MyViewHolder
             @Override
             public void onClick(View v) {
                 Stats clickedItem = StatsArrayList.get(position);
-                Intent perCountryIntent = new Intent(mContext, EachCountryDataActivity.class);
+                Intent perCountryIntent = new Intent(mContext, StatsData.class);
 
                 perCountryIntent.putExtra(COUNTRY_NAME, clickedItem.getCountry());
                 perCountryIntent.putExtra(COUNTRY_CONFIRMED, clickedItem.getConfirmed());

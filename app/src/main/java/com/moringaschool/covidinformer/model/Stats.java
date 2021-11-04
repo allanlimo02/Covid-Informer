@@ -11,7 +11,7 @@ public class Stats {
     private String tests;
     private String flag;
 
-    public StatsModel(String country, String confirmed, String newConfirmed, String active, String deceased, String newDeceased,
+    public Stats(String country, String confirmed, String newConfirmed, String active, String deceased, String newDeceased,
                             String recovered, String tests, String flag) {
         this.country = country;
         this.confirmed = confirmed;
