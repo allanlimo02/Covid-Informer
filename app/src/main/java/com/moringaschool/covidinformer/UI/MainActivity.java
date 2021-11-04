@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.moringaschool.covidinformer.R;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.buttonCall) Button mButtonCall;
     @BindView(R.id.buttonText) Button mButtonText;
     @BindView(R.id.buttonStats) Button mButtonStats;
+    @BindView(R.id.imageViewTest) ImageView mImageViewTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButtonCall.setOnClickListener(this);
         mButtonText.setOnClickListener(this);
         mButtonStats.setOnClickListener(this);
+        mImageViewTest.setOnClickListener(this);
     }
 
     @Override
@@ -45,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (view == mButtonText) {
-
             String mobileNumber = "+254-20-2717077";
             String message = "Hi! I'm experiencing covid symptoms.Thank you!";
             boolean installed = appInstalledOrNot("com.whatsapp");
@@ -60,6 +62,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(MainActivity.this, "Whatsapp not installed on your device", Toast.LENGTH_SHORT).show();
             }
         }
+
+        if (view == mImageViewTest) {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://www.cdc.gov/coronavirus/2019-ncov/testing/self-testing.html"));
+            startActivity(intent);
+        }
     }
 
     private boolean appInstalledOrNot(String url) {
@@ -68,7 +76,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         try {
             packageManager.getPackageInfo(url,PackageManager.GET_ACTIVITIES);
             app_installed = true;
-        }catch (PackageManager.NameNotFoundException e){
+        }
+        catch (PackageManager.NameNotFoundException e){
             app_installed = false;
         }
         return app_installed;

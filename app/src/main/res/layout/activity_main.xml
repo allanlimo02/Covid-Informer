@@ -17,7 +17,7 @@
         android:fontFamily="@font/poppins"
         android:text="COVID-19 TRACKER"
         android:textColor="#FFFFFF"
-        android:textSize="25sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:layout_marginLeft="16dp" />
 
@@ -75,7 +75,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageViewTest"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_below="@+id/buttonCall"
