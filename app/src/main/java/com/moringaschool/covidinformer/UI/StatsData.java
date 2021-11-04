@@ -103,10 +103,4 @@ public class StatsData extends AppCompatActivity{
         str_death_new = intent.getStringExtra(COUNTRY_NEW_DECEASED);
         str_tests = intent.getStringExtra(COUNTRY_TESTS);
     }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home)
-            finish();
-        return super.onOptionsItemSelected(item);
-    }
 }
