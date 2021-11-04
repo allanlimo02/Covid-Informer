@@ -25,7 +25,6 @@ public class CovidSearch extends AppCompatActivity implements View.OnClickListen
         ButterKnife.bind(this);
         mSearchButton.setOnClickListener(this);
     }
-
     @Override
     public void onClick(View view) {
         if (view == mSearchButton) {
