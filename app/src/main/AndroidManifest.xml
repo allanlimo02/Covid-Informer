@@ -11,8 +11,9 @@
         android:theme="@style/Theme.NoTheme">
         <activity
             android:name=".UI.StatsData"
-            android:exported="true" />
-        <activity android:name=".UI.CovidStats">
+            android:theme="@style/Theme.CovidInformer"/>
+        <activity android:name=".UI.CovidStats"
+            android:theme="@style/Theme.CovidInformer">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".UI.MainActivity"

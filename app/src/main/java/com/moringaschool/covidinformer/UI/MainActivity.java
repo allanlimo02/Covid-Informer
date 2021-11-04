@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onCreateOptionsMenu(menu);
     }
 
-    private void logout() {
+    public void logout() {
         FirebaseAuth.getInstance().signOut();
 
         Intent intent = new Intent(MainActivity.this, LogIn.class);
