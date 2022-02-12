@@ -10,14 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NoTheme">
         <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
             android:name=".UI.StatsData"
-            android:theme="@style/Theme.CovidInformer"/>
-        <activity android:name=".UI.CovidStats"
+            android:theme="@style/Theme.CovidInformer" />
+        <activity
+            android:name=".UI.CovidStats"
             android:theme="@style/Theme.CovidInformer">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UI.MainActivity"
-                />
+                android:value=".UI.MainActivity" />
         </activity>
         <activity
             android:name=".UI.SignUp"
@@ -25,16 +35,17 @@
         <activity
             android:name=".UI.LogIn"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".UI.MainActivity"
+        <activity
+            android:name=".UI.MainActivity"
             android:theme="@style/Theme.CovidInformer">
 
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
