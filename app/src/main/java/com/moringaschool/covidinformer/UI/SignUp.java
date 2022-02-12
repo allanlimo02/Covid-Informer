@@ -32,7 +32,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         ButterKnife.bind(this);
-
         mLoginTextView.setOnClickListener(this);
         mCreateUserButton.setOnClickListener(this);
         firebaseAuth=FirebaseAuth.getInstance();
@@ -63,14 +62,13 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 .addOnCompleteListener(this, task -> {
 
                     if(password.equals(confirmPassword)){
-                        if(task.isSuccessful()){
                             Intent intent= new Intent(SignUp.this, MainActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             Toast.makeText(SignUp.this, "Welcome "+name, Toast.LENGTH_SHORT).show();
                             startActivity(intent);
-                        }else {
-                            Toast.makeText(SignUp.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                        }
+//                        }else {
+//                            Toast.makeText(SignUp.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+//                        }
                    }
                    else{
                         mConfirmPasswordEditText.setError("Password don't match");

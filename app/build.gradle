@@ -72,7 +72,7 @@ dependencies {
     annotationProcessor 'org.parceler:parceler:1.1.12'
 
     //Add firebase SDK
-    implementation 'com.google.firebase:firebase-core:20.0.0'
+    implementation 'com.google.firebase:firebase-core:20.0.2'
 
     //Realtime Database for firebase data saving
     implementation 'com.google.firebase:firebase-database:20.0.2'

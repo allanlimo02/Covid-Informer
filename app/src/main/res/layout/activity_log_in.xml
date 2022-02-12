@@ -37,10 +37,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins"
             android:text="Log in"
-            android:textSize="30sp"
             android:textColor="@color/white"
-            android:fontFamily="@font/poppins" />
+            android:textSize="30sp" />
+
 
     <EditText
         android:id="@+id/username"
@@ -83,17 +84,36 @@
         android:fontFamily="@font/poppins"
         android:text="@string/log_in" />
 
-    <TextView
-        android:id="@+id/signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/loginButton"
-        android:text="@string/create_an_account_here"
-        android:fontFamily="@font/poppins"
-        android:textColor="@color/white"
-        android:paddingTop="10dp"
-        android:textSize="13sp" />
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins"
+            android:paddingTop="10dp"
+            android:text="@string/create_an_account_here"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
     </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/pre_loder_pop_up"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/constrain"
+        android:visibility="gone"
+        android:layout_centerVertical="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/progressbar"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

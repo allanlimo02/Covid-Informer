@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_testbanner.xml" value="0.14739583333333334" />
+        <entry key="app/src/main/res/drawable/pre_loder_pop_up.xml" value="0.33645833333333336" />
         <entry key="app/src/main/res/drawable/search_icon.xml" value="0.15104166666666666" />
         <entry key="app/src/main/res/drawable/statistic_button.xml" value="0.15104166666666666" />
         <entry key="app/src/main/res/drawable/statistic_button1.xml" value="0.15104166666666666" />
@@ -11,7 +12,7 @@
         <entry key="app/src/main/res/layout/activity_covid_search.xml" value="0.12903225806451613" />
         <entry key="app/src/main/res/layout/activity_covid_stats.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_informer.xml" value="0.2833333333333333" />
-        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13489583333333333" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.2833333333333333" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
