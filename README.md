@@ -1,5 +1,5 @@
 # COVID INFORMER
-#### This is an app that tracks the statistics of covid-19 in all countries and return the number ofDeaths, Recovery, Confirmed and Active cases.
+#### This is an app that tracks the statistics of covid-19 in all countries and return the number of Deaths, Recovery, Confirmed and Active cases.
 
 ## Demo
 ![App image](app/src/Assets/README/s1.png)
